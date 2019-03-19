@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>REST API status</title>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+		}
+
+		td {
+			border: 1px solid black;
+		}
+
+		.ok {
+			color: green;
+			font-weight: bold;
+		}
+
+		.fail {
+			color: red;
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+<script src="fancy.js"></script>
+
+<body>
+	<h1>REST API status</h1>
+	<p>this table shows how good my async python API REST server actually is [should be all green all the time]</p>
+	<div id="tbl"></div>
+</body>
+
+<script>
+	// all the links shall be relative and are subject to same-domain policy
+	render_statuses(document.getElementById("tbl"), [
+		"index.html",
+		"http://www.dsl.sk"
+	]);
+</script>
+
+</html>
